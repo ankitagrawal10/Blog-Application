@@ -9,14 +9,14 @@ export class Service {
   constructor() {
     this.client
       .setEndpoint(conf.appwriteUrl)
-      .setProject(conf.appwriteProjectID);
+      .setProject(conf.appwriteProjectID)
     this.databases = new Databases(this.client);
     this.bucket = new Storage(this.client);
   }
 
-  async createPost({ title, slug, content, featuredImage, status, userId }) {
+  async createPost({ title, slug, content, featuredImage, status, userid }) {
     try {
-      const documentId = slug.substring(0, 36);
+      const documentId = slug.substring(0, 36).replace(/[^a-zA-Z0-9.\-_]/g, '');
       return await this.databases.createDocument(
         conf.appwriteDatabaseID,
         conf.appwriteCollectionID,
@@ -26,7 +26,7 @@ export class Service {
           content,
           featuredImage,
           status,
-          userId, // Include userId in the data object
+          userid,
         }
       );
     } catch (error) {
