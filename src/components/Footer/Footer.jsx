@@ -4,7 +4,7 @@ import Logo from "../Logo";
 
 function Footer() {
   return (
-    <section className="py-10 bg-gradient-to-b from-gray-700 to-gray-900">
+    <section className="py-14  mt-3 bg-gradient-to-b from-gray-700 to-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex justify-center md:justify-start">
