@@ -104,6 +104,7 @@ export default function PostForm({ post }) {
           name="content"
           control={control}
           defaultValue={getValues("content")}
+          apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
         />
       </div>
       <div className="w-1/3 px-2">
