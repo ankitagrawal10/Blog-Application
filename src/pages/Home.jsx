@@ -61,7 +61,7 @@ function Home() {
     <div className="w-full py-8 bg-white h-80">
       <Container>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6">Welcome to Your Blogging Journey!</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-6 mx-auto text-center lg:text-left">Welcome to Your Blogging Journey!</h1>
           <p className="text-lg text-gray-600 mb-8 max-w-lg text-center">
             Embark on a journey of creativity, inspiration, and connection with our blog. Whether you're here to share your thoughts or discover new ideas, you're in the right place.
           </p>
